@@ -1,3 +1,4 @@
+import MainLayout from "@/layouts/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -6,7 +7,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <div>Home Page</div>,
+        element: <MainLayout />,
       },
       {
         path: "/about",
