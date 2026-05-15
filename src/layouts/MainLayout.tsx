@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/footer/Footer";
+import HeroPage from "@/pages/heropage/HeroPage";
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -12,8 +13,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="flex-1">
-        {children}
+      <main className="">
+        <HeroPage />
       </main>
 
       {/* Footer at bottom */}
