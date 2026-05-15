@@ -1,4 +1,3 @@
-import React from "react";
 import { ModeToggle } from "@/components/button/ModeTogle";
 import { Button } from "@/components/ui/button";
 import { Menu, ChevronRight } from "lucide-react"; 
@@ -21,8 +20,8 @@ export function Navbar() {
   const navLinks = [
     { title: "Home", href: "/" },
     { title: "Services", href: "/services" },
-    { title: "Pricing", href: "/pricing" },
-    { title: "Portfolio", href: "/portfolio" },
+    { title: "Our Work", href: "/ourwork" },
+    { title: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -62,7 +61,7 @@ export function Navbar() {
                 
                 <div className="mt-auto pt-10 px-4">
                   <Button className="w-full bg-[#1877F2] hover:bg-[#1877F2]/90 text-white shadow-lg shadow-blue-500/20 py-6 text-lg">
-                    Get Started
+                    Getting Touch
                   </Button>
                 </div>
               </nav>
@@ -101,7 +100,7 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:gap-4">
           <ModeToggle />
           <Button variant="default" className="hidden sm:flex bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full px-6">
-            Get Started
+            Getting Touch
           </Button>
         </div>
       </div>
