@@ -152,7 +152,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
                       {project.liveLink && (
                         <Button
-                          className="w-full h-16 rounded-2xl bg-slate-950 dark:bg-ebix-blue text-white hover:bg-slate-800 dark:hover:bg-blue-600 font-black text-lg group shadow-2xl transition-all active:scale-95"
+                          className="w-full h-16 rounded-2xl bg-ebix-blue text-white hover:bg-blue-600 font-black text-lg group shadow-2xl transition-all active:scale-95"
                           asChild
                         >
                           <a

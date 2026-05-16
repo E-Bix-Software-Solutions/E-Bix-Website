@@ -24,7 +24,8 @@ const itemVariants: Variants = {
 };
 
 const OurWorkPage = () => {
-  const { selectedProject, isModalOpen, openModal, closeModal } = useProjectModal();
+  const { selectedProject, isModalOpen, openModal, closeModal } =
+    useProjectModal();
 
   const caseStudies = [
     {
@@ -170,7 +171,7 @@ const OurWorkPage = () => {
                   {work.categories.map((cat, i) => (
                     <span
                       key={i}
-                      className="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                      className="bg-ebix-blue/10 text-ebix-blue text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
                     >
                       {cat}
                     </span>
@@ -187,7 +188,7 @@ const OurWorkPage = () => {
 
                 <Button
                   onClick={() => openModal(work)}
-                  className="w-full mt-auto bg-slate-950 dark:bg-ebix-blue text-white hover:bg-slate-800 dark:hover:bg-blue-600 rounded-xl h-12"
+                  className="w-full mt-auto bg-ebix-blue text-white hover:bg-blue-600 rounded-xl h-12"
                 >
                   View Case Study
                 </Button>
@@ -219,14 +220,7 @@ const OurWorkPage = () => {
                 size="lg"
                 className="bg-white text-ebix-blue hover:bg-blue-50 px-8 rounded-full font-bold h-14"
               >
-                Get Started Now
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-ebix-blue hover:bg-white/10 px-8 rounded-full font-bold h-14"
-              >
-                Contact Sales
+                Contact Us
               </Button>
             </div>
           </div>
