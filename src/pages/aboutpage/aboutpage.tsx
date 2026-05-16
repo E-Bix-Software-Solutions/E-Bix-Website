@@ -35,7 +35,7 @@ const AboutPage = () => {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="mb-6">
-            <span className="bg-slate-950 dark:bg-ebix-blue text-white text-[11px] font-bold tracking-[0.2em] px-6 py-2.5 rounded-full uppercase shadow-xl transition-colors duration-300">
+            <span className="bg-ebix-blue text-white text-[11px] font-bold tracking-[0.2em] px-6 py-2.5 rounded-full uppercase shadow-xl transition-colors duration-300">
               Work Smarter, Not Harder
             </span>
           </motion.div>
@@ -59,24 +59,18 @@ const AboutPage = () => {
             whileHover={{ y: -10, transition: { duration: 0.2 } }}
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-slate-950 dark:border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
+            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
               The Story
             </h3>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              <span className="font-bold text-foreground">
+              <span className="font-bold text-ebix-blue">
                 E-Bix Software Solutions
               </span>{" "}
-              helps{" "}
-              <span className="font-bold text-foreground">
-                Sri Lankan businesses grow online.
-              </span>{" "}
-              We use AI and creative ideas to build powerful digital tools not
-              just websites that{" "}
-              <span className="font-bold text-foreground">
-                increase your income.
-              </span>
+              helps <span>Global businesses grow online.</span> We use AI and
+              creative ideas to build powerful digital tools not just websites
+              that <span>increase your income.</span>
             </p>
 
             {/* Story Visualization: Growth Path */}
@@ -158,7 +152,7 @@ const AboutPage = () => {
 
               <p className="mt-5 text-sm font-medium text-muted-foreground/80 leading-relaxed italic">
                 Our solutions aren't just code; they're{" "}
-                <span className="text-foreground font-semibold">
+                <span className="text-ebix-blue font-semibold">
                   engines for expansion
                 </span>
                 .
@@ -173,29 +167,21 @@ const AboutPage = () => {
             whileHover={{ y: -10, transition: { duration: 0.2 } }}
             transition={{ duration: 0.7, delay: 0.5 }}
             viewport={{ once: true }}
-            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-slate-950 dark:border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
+            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
               The Team
             </h3>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
               We are tech innovators who believe in{" "}
-              <span className="font-bold text-foreground">
-                "Working Smarter."
-              </span>{" "}
-              We bring high-end digital tools to{" "}
-              <span className="font-bold text-foreground">
-                everyday businesses
-              </span>{" "}
-              saving you time, cutting your costs, and growing your online
-              presence.
+              <span>"Working Smarter."</span> We bring high-end digital tools to{" "}
+              <span>everyday businesses</span> saving you time, cutting your
+              costs, and growing your online presence.
             </p>
 
             {/* Team Members List */}
 
-            <h4 className="text-md md:text-lg font-bold text-foreground">
-              Co-Founders
-            </h4>
+            <span className="font-bold text-ebix-blue">Co-Founders</span>
             <div className="flex flex-wrap gap-6 mt-4 align-center">
               {[
                 {
@@ -256,7 +242,7 @@ const AboutPage = () => {
           className="bg-[#0a121e] dark:bg-slate-900 rounded-[2.5rem] p-10 md:p-16 lg:p-20 text-center text-white flex flex-col gap-8 shadow-2xl relative overflow-hidden transition-colors duration-300"
         >
           {/* Subtle background glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[100px] -z-10"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-ebix-blue/10 blur-[100px] -z-10"></div>
 
           <div className="max-w-4xl mx-auto space-y-10">
             <p className="text-2xl md:text-3xl lg:text-4xl font-medium italic leading-relaxed text-slate-100">

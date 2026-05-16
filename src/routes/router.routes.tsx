@@ -9,10 +9,7 @@ const router = createBrowserRouter([
         index: true,
         element: <MainLayout />,
       },
-      {
-        path: "/about",
-        element: <div>About Page</div>,
-      },
+
       {
         path: "*",
         element: <div>404 Not Found</div>,

@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer/Footer";
 import HeroPage from "@/pages/heropage/HeroPage";
 import ServicePage from "@/pages/servicepage/ServicePage";
 import AboutPage from "@/pages/aboutpage/aboutpage";
+import OurWorkPage from "@/pages/ourworkpage/ourwork";
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -19,6 +20,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <HeroPage />
         <AboutPage />
         <ServicePage />
+        <OurWorkPage />
       </main>
 
       {/* Footer at bottom */}
