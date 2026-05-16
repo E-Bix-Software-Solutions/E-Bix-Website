@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/footer/Footer";
-import { Outlet } from "react-router-dom";
+import HeroPage from "@/pages/heropage/HeroPage";
+import ServicePage from "@/pages/servicepage/ServicePage";
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -13,8 +14,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="flex-1">
-        {children || <Outlet />}
+      <main className="">
+        <HeroPage />
+        <ServicePage />
       </main>
 
       {/* Footer at bottom */}
