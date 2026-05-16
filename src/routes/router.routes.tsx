@@ -1,26 +1,23 @@
 import MainLayout from "@/layouts/MainLayout";
-import Home from "@/pages/Home";
-import AboutSection from "@/components/sections/about";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <MainLayout />,
       },
       {
-        path: "about",
-        element: <AboutSection />,
+        path: "/about",
+        element: <div>About Page</div>,
       },
       {
         path: "*",
         element: <div>404 Not Found</div>,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ]);
 export default router;

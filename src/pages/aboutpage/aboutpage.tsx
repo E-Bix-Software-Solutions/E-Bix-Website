@@ -1,6 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 
-const AboutSection = () => {
+const AboutPage = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,7 +21,10 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-background transition-colors duration-300 overflow-hidden">
+    <section
+      id="about"
+      className="py-24 bg-background transition-colors duration-300 overflow-hidden"
+    >
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           variants={containerVariants}
@@ -136,4 +139,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default AboutPage;
