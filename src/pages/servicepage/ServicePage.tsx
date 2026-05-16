@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Smartphone, Play, Building, TrendingUp } from "lucide-react";
-import { ModeToggle } from "@/components/button/ModeTogle";
 
 const services = [
   {
