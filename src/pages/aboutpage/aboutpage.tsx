@@ -104,6 +104,56 @@ const AboutPage = () => {
               saving you time, cutting your costs, and growing your online
               presence.
             </p>
+
+            {/* Team Members List */}
+            <div className="flex flex-wrap gap-6 mt-4 align-center">
+              {[
+                {
+                  name: "Sahan Dhanujaya",
+                  postition: "Software Engineer",
+                  linked:
+                    "https://www.linkedin.com/in/sahan-dhanujaya-040aa4359/",
+                  img: "/sahan.jpeg",
+                },
+                {
+                  name: "Sherul Dhanuska",
+                  postition: "Software Engineer",
+                  linked:
+                    "https://www.linkedin.com/in/sherul-dhanushka-204a58202/",
+                  img: "/sherul.jpeg",
+                },
+                {
+                  name: "Mahesh Hansaka",
+                  postition: "Software Engineer",
+                  linked:
+                    "https://www.linkedin.com/in/mahesh-hansaka-1069a3310/",
+                  img: "/mahesh2.jpeg",
+                },
+              ].map((member, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-5">
+                  <a
+                    href={member.linked}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-ebix-blue shadow-lg transition-transform hover:scale-110 cursor-pointer block"
+                  >
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      title={member.postition}
+                      className="w-full h-full object-cover"
+                    />
+                  </a>
+                  <span className="text-sm font-bold text-foreground text-center leading-tight">
+                    {member.name.split(" ").map((n, i) => (
+                      <span key={i} className="block">
+                        {n}
+                      </span>
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
 
