@@ -5,11 +5,7 @@ import ServicePage from "@/pages/servicepage/ServicePage";
 import AboutPage from "@/pages/aboutpage/aboutpage";
 import OurWorkPage from "@/pages/ourworkpage/ourwork";
 
-interface MainLayoutProps {
-  children?: React.ReactNode;
-}
-
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = () => {
   return (
     <div className="relative flex min-h-screen flex-col">
       {/* Sticky Navbar */}
