@@ -78,6 +78,92 @@ const AboutPage = () => {
                 increase your income.
               </span>
             </p>
+
+            {/* Story Visualization: Growth Path */}
+            <div className="mt-auto pt-8 border-t border-border/50 relative overflow-hidden group">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-muted-foreground/70">
+                  Client Growth Metric
+                </span>
+                <div className="flex gap-1.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-ebix-blue animate-pulse"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-ebix-blue animate-pulse [animation-delay:200ms]"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-ebix-blue animate-pulse [animation-delay:400ms]"></div>
+                </div>
+              </div>
+
+              <div className="h-32 w-full bg-slate-50/30 dark:bg-slate-900/30 rounded-3xl border border-border/40 flex items-center justify-center relative overflow-hidden backdrop-blur-sm">
+                {/* Decorative Grid */}
+                <div className="absolute inset-0 grid grid-cols-6 h-full w-full opacity-[0.03] dark:opacity-[0.07] pointer-events-none">
+                  {[...Array(6)].map((_, i) => (
+                    <div key={i} className="border-r border-foreground"></div>
+                  ))}
+                </div>
+
+                <svg
+                  className="w-full h-full p-6 relative z-10"
+                  viewBox="0 0 240 60"
+                >
+                  <motion.path
+                    d="M10,50 C40,48 60,35 80,30 C110,23 130,28 160,15 C190,2 210,12 230,5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                    className="text-ebix-blue"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    whileInView={{ pathLength: 1, opacity: 1 }}
+                    transition={{ duration: 2.5, ease: "easeInOut" }}
+                    viewport={{ once: true }}
+                  />
+                  {/* Milestones */}
+                  {[
+                    { x: 80, y: 30, d: 1.2 },
+                    { x: 160, y: 15, d: 1.8 },
+                    { x: 230, y: 5, d: 2.4 },
+                  ].map((pt, i) => (
+                    <motion.circle
+                      key={i}
+                      cx={pt.x}
+                      cy={pt.y}
+                      r="4"
+                      fill="currentColor"
+                      className="text-ebix-blue"
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 20,
+                        delay: pt.d,
+                      }}
+                      viewport={{ once: true }}
+                    />
+                  ))}
+                </svg>
+
+                {/* Growth Label */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 2.6 }}
+                  viewport={{ once: true }}
+                  className="absolute right-6 bottom-4 bg-background/80 dark:bg-card/80 backdrop-blur-md px-3 py-1 rounded-full border border-border/50 shadow-sm"
+                >
+                  <span className="text-[10px] font-black text-ebix-blue">
+                    +45% ROI
+                  </span>
+                </motion.div>
+              </div>
+
+              <p className="mt-5 text-sm font-medium text-muted-foreground/80 leading-relaxed italic">
+                Our solutions aren't just code; they're{" "}
+                <span className="text-foreground font-semibold">
+                  engines for expansion
+                </span>
+                .
+              </p>
+            </div>
           </motion.div>
 
           {/* Card: The Team */}
@@ -106,6 +192,10 @@ const AboutPage = () => {
             </p>
 
             {/* Team Members List */}
+
+            <h4 className="text-md md:text-lg font-bold text-foreground">
+              Co-Founders
+            </h4>
             <div className="flex flex-wrap gap-6 mt-4 align-center">
               {[
                 {
