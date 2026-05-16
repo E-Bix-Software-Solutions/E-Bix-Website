@@ -16,8 +16,8 @@ const router = createBrowserRouter([
       {
         path: "*",
         element: <div>404 Not Found</div>,
-      }
-    ]
-  }
+      },
+    ],
+  },
 ]);
 export default router;
