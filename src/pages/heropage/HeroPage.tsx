@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Rocket, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Adjust according to your shadcn paths
 
@@ -30,7 +30,7 @@ const glowVariants = {
     transition: {
       duration: 8,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: [0.16, 1, 0.3, 1],
     },
   },
 };
@@ -41,19 +41,19 @@ export default function HeroPage() {
       
       {/* --- Ambient Background Glows --- */}
       <motion.div 
-        variants={glowVariants}
+        variants={glowVariants as unknown as Variants}
         animate="animate"
         className="absolute top-1/4 -left-20 h-[350px] w-[350px] rounded-full bg-[#1877F2]/20 blur-[100px] pointer-events-none"
       />
       <motion.div 
-        variants={glowVariants}
+        variants={glowVariants as unknown as Variants}
         animate="animate"
         className="absolute bottom-1/4 -right-20 h-[400px] w-[400px] rounded-full bg-[#1877F2]/15 blur-[120px] pointer-events-none"
       />
 
       {/* --- Main Hero Container --- */}
       <motion.div 
-        variants={containerVariants}
+        variants={containerVariants as Variants}
         initial="hidden"
         animate="visible"
         className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10"
@@ -63,7 +63,7 @@ export default function HeroPage() {
         <div className="col-span-1 lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left">
           
           {/* Badge */}
-          <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
+          <motion.div variants={itemVariants as unknown as Variants} className="flex justify-center lg:justify-start">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-[#1877F2]/10 text-[#1877F2] border border-[#1877F2]/20 backdrop-blur-md">
               <Rocket className="h-3.5 w-3.5 animate-pulse" />
               Next-Gen Software Engineering
@@ -72,7 +72,7 @@ export default function HeroPage() {
 
           {/* Heading */}
           <motion.h1 
-            variants={itemVariants}
+            variants={itemVariants as unknown as Variants}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.15]"
           >
             Empowering Digital Evolution With <span className="text-[#1877F2] bg-gradient-to-r from-[#1877F2] to-[#4fa1ff] bg-clip-text text-transparent">E-Bix</span> Solutions
@@ -80,7 +80,7 @@ export default function HeroPage() {
 
           {/* Description */}
           <motion.p 
-            variants={itemVariants}
+            variants={itemVariants as unknown as Variants}
             className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"
           >
             We engineer high-performance, robust software frameworks tailored to elevate your enterprise scale. Turn your architectural visions into production-ready digital realities.
@@ -88,7 +88,7 @@ export default function HeroPage() {
 
           {/* Call To Actions */}
           <motion.div 
-            variants={itemVariants}
+            variants={itemVariants as unknown as Variants}
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4"
           >
             <Button size="lg" className="w-full sm:w-auto bg-[#1877F2] hover:bg-[#1877F2]/90 text-white font-medium shadow-lg shadow-[#1877F2]/20 group px-6">
@@ -104,7 +104,7 @@ export default function HeroPage() {
 
         {/* Right Column: Visual Interface Frame */}
         <motion.div 
-          variants={itemVariants}
+          variants={itemVariants as unknown as Variants}
           className="col-span-1 lg:col-span-5 flex justify-center lg:justify-end"
         >
           {/* Glassmorphism Outer Visual Container */}
