@@ -98,13 +98,13 @@ const ServicePage = () => {
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="bg-card/60 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:bg-card/80 hover:border-border/80 transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="bg-card/70 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:bg-card/90 hover:border-border/80 transition-all duration-300 shadow-sm hover:shadow-md group"
             >
               <div className="w-12 h-12 rounded-xl border border-[#1877F2]/20 bg-[#1877F2]/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-              <p className="leading-relaxed text-sm">
+              <p className="text-muted-foreground leading-relaxed text-sm">
                 {service.description}
               </p>
             </motion.div>
