@@ -21,7 +21,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-24 bg-background transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           variants={containerVariants}
@@ -32,7 +32,7 @@ const AboutSection = () => {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className="mb-6">
-            <span className="bg-slate-950 text-white text-[11px] font-bold tracking-[0.2em] px-6 py-2.5 rounded-full uppercase shadow-xl">
+            <span className="bg-slate-950 dark:bg-ebix-blue text-white text-[11px] font-bold tracking-[0.2em] px-6 py-2.5 rounded-full uppercase shadow-xl transition-colors duration-300">
               Work Smarter, Not Harder
             </span>
           </motion.div>
@@ -40,7 +40,7 @@ const AboutSection = () => {
           {/* Heading */}
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] max-w-4xl tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] max-w-4xl tracking-tight transition-colors duration-300"
           >
             We Design Dreams, <br className="hidden md:block" /> Not Just
             Websites.
@@ -53,24 +53,25 @@ const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
             transition={{ duration: 0.7, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-white p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 border-t-8 border-t-slate-950 flex flex-col gap-6"
+            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-slate-950 dark:border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
               The Story
             </h3>
-            <p className="text-slate-500 text-lg md:text-xl leading-relaxed">
-              <span className="font-bold text-slate-900">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
+              <span className="font-bold text-foreground">
                 E-Bix Software Solutions
               </span>{" "}
               helps{" "}
-              <span className="font-bold text-slate-900">
+              <span className="font-bold text-foreground">
                 Sri Lankan businesses grow online.
               </span>{" "}
               We use AI and creative ideas to build powerful digital tools not
               just websites that{" "}
-              <span className="font-bold text-slate-900">
+              <span className="font-bold text-foreground">
                 increase your income.
               </span>
             </p>
@@ -80,20 +81,21 @@ const AboutSection = () => {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
+            whileHover={{ y: -10, transition: { duration: 0.2 } }}
             transition={{ duration: 0.7, delay: 0.5 }}
             viewport={{ once: true }}
-            className="bg-white p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 border-t-8 border-t-slate-950 flex flex-col gap-6"
+            className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-slate-950 dark:border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
               The Team
             </h3>
-            <p className="text-slate-500 text-lg md:text-xl leading-relaxed">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
               We are tech innovators who believe in{" "}
-              <span className="font-bold text-slate-900">
+              <span className="font-bold text-foreground">
                 "Working Smarter."
               </span>{" "}
               We bring high-end digital tools to{" "}
-              <span className="font-bold text-slate-900">
+              <span className="font-bold text-foreground">
                 everyday businesses
               </span>{" "}
               saving you time, cutting your costs, and growing your online
@@ -108,7 +110,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#0a121e] rounded-[2.5rem] p-10 md:p-16 lg:p-20 text-center text-white flex flex-col gap-8 shadow-2xl relative overflow-hidden"
+          className="bg-[#0a121e] dark:bg-slate-900 rounded-[2.5rem] p-10 md:p-16 lg:p-20 text-center text-white flex flex-col gap-8 shadow-2xl relative overflow-hidden transition-colors duration-300"
         >
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[100px] -z-10"></div>
