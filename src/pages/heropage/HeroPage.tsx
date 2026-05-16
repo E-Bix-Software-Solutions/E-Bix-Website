@@ -37,7 +37,7 @@ const glowVariants = {
 
 export default function HeroPage() {
   return (
-    <div className="relative min-h-[90vh] w-full overflow-hidden bg-background flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
+    <div className="relative min-h-[90vh] w-full overflow-hidden bg-background flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-4">
       
       {/* --- Ambient Background Glows --- */}
       <motion.div 
