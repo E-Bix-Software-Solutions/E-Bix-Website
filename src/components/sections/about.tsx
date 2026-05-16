@@ -1,106 +1,134 @@
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Shield, Rocket, Layers } from "lucide-react";
-import { Link } from "react-router-dom";
+import { motion, type Variants } from "framer-motion";
 
 const AboutSection = () => {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section id="about" className="py-20 bg-slate-50 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Image Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-square md:aspect-video lg:aspect-square">
-              <img
-                src="/about-us.png"
-                alt="About E-Bix Software Solutions"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            </div>
-            
-            {/* Decorative elements for premium feel */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-ebix-blue rounded-3xl -z-10 opacity-20 blur-2xl animate-pulse"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-ebix-blue rounded-3xl -z-10 opacity-10 blur-xl"></div>
+    <section id="about" className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="flex flex-col items-center text-center mb-16"
+        >
+          {/* Badge */}
+          <motion.div variants={itemVariants} className="mb-6">
+            <span className="bg-slate-950 text-white text-[11px] font-bold tracking-[0.2em] px-6 py-2.5 rounded-full uppercase shadow-xl">
+              Work Smarter, Not Harder
+            </span>
           </motion.div>
 
-          {/* Content Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-6"
+          {/* Heading */}
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] max-w-4xl tracking-tight"
           >
-            <div>
-              <span className="text-ebix-blue font-bold tracking-widest text-sm uppercase mb-2 block">
-                ABOUT US
+            We Design Dreams, <br className="hidden md:block" /> Not Just
+            Websites.
+          </motion.h2>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          {/* Card: The Story */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="bg-white p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 border-t-8 border-t-slate-950 flex flex-col gap-6"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+              The Story
+            </h3>
+            <p className="text-slate-500 text-lg md:text-xl leading-relaxed">
+              <span className="font-bold text-slate-900">
+                E-Bix Software Solutions
+              </span>{" "}
+              helps{" "}
+              <span className="font-bold text-slate-900">
+                Sri Lankan businesses grow online.
+              </span>{" "}
+              We use AI and creative ideas to build powerful digital tools not
+              just websites that{" "}
+              <span className="font-bold text-slate-900">
+                increase your income.
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-                Innovating with <span className="text-ebix-blue">Purpose</span>
-              </h2>
-            </div>
+            </p>
+          </motion.div>
 
-            <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
-              <p>
-                At E-Bix Software Solutions, we don't just build software; we engineer growth. Our mission is to bridge the gap between complex technology and tangible business success through intelligent design and robust engineering.
-              </p>
-              <p>
-                With a focus on reliability, innovation, and scalability, we partner with businesses to deliver custom digital solutions that solve real-world problems and drive long-term value.
-              </p>
-            </div>
-
-            {/* Value Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="flex flex-col gap-2 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md"
-              >
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-ebix-blue">
-                  <Shield size={20} />
-                </div>
-                <h4 className="font-bold text-slate-900">Reliability</h4>
-                <p className="text-sm text-slate-500">Systems built to perform consistently.</p>
-              </motion.div>
-              
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="flex flex-col gap-2 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md"
-              >
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-ebix-blue">
-                  <Rocket size={20} />
-                </div>
-                <h4 className="font-bold text-slate-900">Innovation</h4>
-                <p className="text-sm text-slate-500">Pioneering new ways to solve challenges.</p>
-              </motion.div>
-
-              <motion.div 
-                whileHover={{ y: -5 }}
-                className="flex flex-col gap-2 p-4 bg-white rounded-2xl shadow-sm border border-slate-100 transition-shadow hover:shadow-md"
-              >
-                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-ebix-blue">
-                  <Layers size={20} />
-                </div>
-                <h4 className="font-bold text-slate-900">Scalability</h4>
-                <p className="text-sm text-slate-500">Solutions that grow alongside your team.</p>
-              </motion.div>
-            </div>
-
-            <div className="mt-6">
-              <Link to="/about">
-                <Button className="bg-ebix-blue hover:bg-ebix-blue/90 text-white rounded-full px-8 py-6 text-lg shadow-lg shadow-blue-500/20 transition-all hover:scale-105 active:scale-95">
-                  Our Story
-                </Button>
-              </Link>
-            </div>
+          {/* Card: The Team */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-white p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 border-t-8 border-t-slate-950 flex flex-col gap-6"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+              The Team
+            </h3>
+            <p className="text-slate-500 text-lg md:text-xl leading-relaxed">
+              We are tech innovators who believe in{" "}
+              <span className="font-bold text-slate-900">
+                "Working Smarter."
+              </span>{" "}
+              We bring high-end digital tools to{" "}
+              <span className="font-bold text-slate-900">
+                everyday businesses
+              </span>{" "}
+              saving you time, cutting your costs, and growing your online
+              presence.
+            </p>
           </motion.div>
         </div>
+
+        {/* Bottom Quote Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="bg-[#0a121e] rounded-[2.5rem] p-10 md:p-16 lg:p-20 text-center text-white flex flex-col gap-8 shadow-2xl relative overflow-hidden"
+        >
+          {/* Subtle background glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 blur-[100px] -z-10"></div>
+
+          <div className="max-w-4xl mx-auto space-y-10">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-medium italic leading-relaxed text-slate-100">
+              "Business is like a game of Chess. You can't win with just one
+              piece. You need a strategy."
+            </p>
+            <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
+              At{" "}
+              <span className="text-white font-semibold">
+                E-Bix Software Solutions
+              </span>
+              , we act as your strategic partner. We align the right digital
+              pieces from Bishops to Queens to ensure your business always wins
+              the game.
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
