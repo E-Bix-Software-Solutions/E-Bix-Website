@@ -8,10 +8,10 @@ import { LoaderProvider } from "./components/providers/LoaderProvider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <LoaderProvider>
+    <LoaderProvider>
+      <ThemeProvider>
         <RouterProvider router={router} />
-      </LoaderProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </LoaderProvider>
   </StrictMode>,
 );

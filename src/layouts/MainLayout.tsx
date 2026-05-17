@@ -12,15 +12,25 @@ const MainLayout = () => {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="">
-        <HeroPage />
-        <AboutPage />
-        <ServicePage />
-        <OurWorkPage />
+      <main className="flex-1">
+        <div id="home">
+          <HeroPage />
+        </div>
+        <div id="about" className="scroll-mt-16">
+          <AboutPage />
+        </div>
+        <div id="services" className="scroll-mt-16">
+          <ServicePage />
+        </div>
+        <div id="ourwork" className="scroll-mt-16">
+          <OurWorkPage />
+        </div>
       </main>
 
-      {/* Footer at bottom */}
-      <Footer />
+      {/* Footer at bottom - matching contact route */}
+      <div id="contact" className="scroll-mt-16">
+        <Footer />
+      </div>
     </div>
   );
 };

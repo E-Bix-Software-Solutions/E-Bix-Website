@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react"
+import { useLoader } from "./LoaderProvider" // Ensure this maps correctly to your context path
 
 type Theme = "dark" | "light" | "system"
 
@@ -29,6 +30,7 @@ export function ThemeProvider({
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
   )
+  const { setIsLoading } = useLoader()
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -36,23 +38,29 @@ export function ThemeProvider({
     root.classList.remove("light", "dark")
 
     if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light"
-
       root.classList.add(systemTheme)
-      return
+    } else {
+      root.classList.add(theme)
     }
 
-    root.classList.add(theme)
-  }, [theme])
+    // Smooth Next-Gen transition delay to let classes apply perfectly
+    const timer = setTimeout(() => {
+      setIsLoading(false) 
+    }, 800)
+
+    // Cleanup phase to handle fast repeated triggers safely
+    return () => clearTimeout(timer)
+  }, [theme, setIsLoading])
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme)
-      setTheme(theme)
+    setTheme: (newTheme: Theme) => {
+      setIsLoading(true) // 1. Bring up the premium E-Bix blur overlay immediately 
+      localStorage.setItem(storageKey, newTheme)
+      setTheme(newTheme)
     },
   }
 
