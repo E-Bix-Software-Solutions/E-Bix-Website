@@ -58,6 +58,7 @@ export function ThemeProvider({
   const value = {
     theme,
     setTheme: (newTheme: Theme) => {
+      if (newTheme === theme) return
       setIsLoading(true) // 1. Bring up the premium E-Bix blur overlay immediately 
       localStorage.setItem(storageKey, newTheme)
       setTheme(newTheme)
