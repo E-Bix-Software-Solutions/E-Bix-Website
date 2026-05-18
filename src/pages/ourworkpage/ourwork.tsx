@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import ProjectModal from "@/components/modals/ProjectModal";
 import { useProjectModal } from "@/hooks/useProjectModal";
-import { useEffect, useState } from "react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
