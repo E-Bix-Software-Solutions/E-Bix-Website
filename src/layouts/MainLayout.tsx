@@ -4,6 +4,7 @@ import HeroPage from "@/pages/heropage/HeroPage";
 import ServicePage from "@/pages/servicepage/ServicePage";
 import AboutPage from "@/pages/aboutpage/aboutpage";
 import OurWorkPage from "@/pages/ourworkpage/ourwork";
+import ContactPage from "@/pages/contactpage/ContactPage";
 
 const MainLayout = () => {
   return (
@@ -24,6 +25,9 @@ const MainLayout = () => {
         </div>
         <div id="ourwork" className="scroll-mt-16">
           <OurWorkPage />
+        </div>
+        <div id="contactus" className="scroll-mt-16">
+          <ContactPage />
         </div>
       </main>
 
