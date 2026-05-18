@@ -25,12 +25,11 @@ export function Navbar() {
     { title: "About Us", href: "#about", id: "about" },
     { title: "Services", href: "#services", id: "services" },
     { title: "Our Work", href: "#ourwork", id: "ourwork" },
-    { title: "Contact Us", href: "#contact", id: "contact" },
+    { title: "Contact Us", href: "#contactus", id: "contactus" },
   ];
 
   // 1. Smart Scroll spy using Intersection Observer API
   useEffect(() => {
-
     const observerOptions = {
       root: null,
       rootMargin: "-20% 0px -60% 0px", // Trigger when section occupies focal viewport space
@@ -45,7 +44,10 @@ export function Navbar() {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
 
     navLinks.forEach((link) => {
       const element = document.getElementById(link.id);
@@ -56,7 +58,10 @@ export function Navbar() {
   }, []);
 
   // 2. Intercept click for seamless scroll behaviors
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string,
+  ) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
@@ -69,9 +74,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 md:px-8">
       <div className="container flex h-16 items-center justify-between">
-        
         {/* Mobile Menu Trigger & Sheet */}
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button
@@ -89,12 +93,12 @@ export function Navbar() {
             >
               <SheetHeader className="border-b pb-6">
                 <SheetTitle className="text-left flex items-center gap-3">
-                  <img
-                    src="/logo-icon.png"
-                    alt="E-Bix"
-                    className="h-10 w-10 object-contain"
-                  />
-                  <span className="text-2xl font-bold tracking-tighter text-[#1877F2]">
+                  <div className="relative flex h-7 w-7 items-center justify-center rounded-md bg-[#1877F2] transition-transform group-hover:rotate-12">
+                    <span className="text-white font-black text-lg italic leading-none">
+                      E
+                    </span>
+                  </div>
+                  <span className="text-xl font-bold tracking-tighter text-[#1877F2]">
                     E-Bix
                   </span>
                 </SheetTitle>
@@ -129,8 +133,8 @@ export function Navbar() {
 
                 <div className="mt-auto pt-10 px-4">
                   <a
-                    href="#contact"
-                    onClick={(e) => handleScroll(e, "contact")}
+                    href="#contactus"
+                    onClick={(e) => handleScroll(e, "contactus")}
                     className="block w-full text-center"
                   >
                     <Button className="w-full bg-[#1877F2] hover:bg-[#1877F2]/90 text-white shadow-lg shadow-blue-500/20 py-6 text-lg rounded-xl">
@@ -144,11 +148,11 @@ export function Navbar() {
         </div>
 
         {/* Desktop Branding */}
-        <div 
+        <div
           onClick={() => {
             const el = document.getElementById("home");
-            if(el) el.scrollIntoView({ behavior: "smooth" });
-          }} 
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+          }}
           className="flex items-center gap-3 group cursor-pointer"
         >
           <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#1877F2] transition-transform group-hover:rotate-12">
@@ -162,7 +166,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation Link UI Hook */}
-        <NavigationMenu className="hidden md:flex">
+        <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="gap-1">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
@@ -172,8 +176,8 @@ export function Navbar() {
                     href={link.href}
                     onClick={(e) => handleScroll(e, link.id)}
                     className={`inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-all duration-200 relative cursor-pointer ${
-                      isActive 
-                        ? "text-[#1877F2]" 
+                      isActive
+                        ? "text-[#1877F2]"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -192,7 +196,7 @@ export function Navbar() {
         {/* Global Action items */}
         <div className="flex items-center gap-2 md:gap-4">
           <ModeToggle />
-          <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
+          <a href="#contactus" onClick={(e) => handleScroll(e, "contactus")}>
             <Button
               variant="default"
               className="hidden sm:flex bg-[#1877F2] hover:bg-[#1877F2]/90 text-white rounded-full px-6"

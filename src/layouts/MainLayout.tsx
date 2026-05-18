@@ -32,7 +32,7 @@ const MainLayout = () => {
       </main>
 
       {/* Footer at bottom - matching contact route */}
-      <div id="contact" className="scroll-mt-16">
+      <div className="scroll-mt-16">
         <Footer />
       </div>
     </div>

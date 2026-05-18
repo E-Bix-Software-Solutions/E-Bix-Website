@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import ProjectModal from "@/components/modals/ProjectModal";
 import { useProjectModal } from "@/hooks/useProjectModal";
+import { useEffect, useState } from "react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -115,6 +116,17 @@ const OurWorkPage = () => {
     },
   ];
 
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string,
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <main className="bg-background transition-colors duration-300 min-h-screen pt-32 pb-24">
       {/* Section : Our Works Grid */}
@@ -216,12 +228,17 @@ const OurWorkPage = () => {
               business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="bg-white text-ebix-blue hover:bg-blue-50 px-8 rounded-full font-bold h-14"
+              <a
+                href="#contactus"
+                onClick={(e) => handleScroll(e, "contactus")}
               >
-                Contact Us
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-white text-ebix-blue hover:bg-blue-50 px-8 rounded-full font-bold h-14"
+                >
+                  Contact Us
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>

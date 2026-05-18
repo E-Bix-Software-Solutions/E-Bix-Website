@@ -54,7 +54,7 @@ const ServicePage = () => {
       />
       
       {/* Overlay to ensure text remains readable */}
-      <div className="absolute inset-0 bg-background/15 dark:bg-background/25 z-0" />
+      <div className="absolute inset-0 bg-background-transparent dark:bg-background/25 z-0" />
 
       {/* Subtle Background Effect */}
       <div className="absolute inset-0 pointer-events-none z-0">
@@ -72,13 +72,13 @@ const ServicePage = () => {
         >
           <motion.h2 
             variants={fadeInUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
+            className="text-gray-100 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
           >
             Digital Infrastructure & Growth Strategies
           </motion.h2>
           <motion.p 
             variants={fadeInUp}
-            className="max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
+            className="text-gray-300 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
           >
             We build robust digital foundations and deploy cutting-edge growth 
             strategies so you can easily Work Smarter, Not Harder.
@@ -97,13 +97,13 @@ const ServicePage = () => {
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="bg-card/70 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:bg-card/90 hover:border-border/80 transition-all duration-300 shadow-sm hover:shadow-md group"
+              className="bg-card/80 dark:bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:bg-card/90 dark:hover:bg-card/90 hover:border-border/80 transition-all duration-300 shadow-sm hover:shadow-md group"
             >
               <div className="w-12 h-12 rounded-xl border border-[#1877F2]/20 bg-[#1877F2]/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
+              <p className="leading-relaxed text-sm">
                 {service.description}
               </p>
             </motion.div>

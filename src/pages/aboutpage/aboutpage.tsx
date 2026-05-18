@@ -61,10 +61,10 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h3 className="text-xl md:text-2xl font-bold text-foreground">
               The Story
             </h3>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
+            <p className="text-muted-foreground text-md md:text-lg leading-relaxed">
               <span className="font-bold text-ebix-blue">
                 E-Bix Software Solutions
               </span>{" "}
@@ -169,10 +169,10 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="bg-card p-10 md:p-14 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-border border-t-8 border-t-ebix-blue flex flex-col gap-6 transition-all duration-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+            <h3 className="text-xl md:text-2xl font-bold text-foreground">
               The Team
             </h3>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
+            <p className="text-muted-foreground text-md md:text-lg leading-relaxed">
               We are tech innovators who believe in{" "}
               <span>"Working Smarter."</span> We bring high-end digital tools to{" "}
               <span>everyday businesses</span> saving you time, cutting your
@@ -245,11 +245,11 @@ const AboutPage = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-ebix-blue/10 blur-[100px] -z-10"></div>
 
           <div className="max-w-4xl mx-auto space-y-10">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-medium italic leading-relaxed text-slate-100">
+            <p className="text-xl md:text-2xl lg:text-3xl font-medium italic leading-relaxed text-slate-100">
               "Business is like a game of Chess. You can't win with just one
               piece. You need a strategy."
             </p>
-            <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
+            <p className="text-md md:text-lg text-slate-400 leading-relaxed font-light">
               At{" "}
               <span className="text-white font-semibold">
                 E-Bix Software Solutions
