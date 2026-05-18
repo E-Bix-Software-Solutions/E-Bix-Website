@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
@@ -26,6 +27,15 @@ const itemVariants: Variants = {
 const OurWorkPage = () => {
   const { selectedProject, isModalOpen, openModal, closeModal } =
     useProjectModal();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const caseStudies = [
     {
@@ -146,9 +156,9 @@ const OurWorkPage = () => {
               key={idx}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -10 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileHover={isMobile ? undefined : { y: -10 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: isMobile ? 0 : idx * 0.1 }}
               className="bg-card rounded-[2rem] overflow-hidden border border-border flex flex-col h-full shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-2xl transition-all duration-500"
             >
               {/* Project Image */}
@@ -203,7 +213,7 @@ const OurWorkPage = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
           className="bg-ebix-blue p-12 md:p-20 rounded-[3rem] text-center text-white relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 blur-[100px] -z-0"></div>
