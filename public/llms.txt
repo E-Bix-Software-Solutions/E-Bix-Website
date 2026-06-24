@@ -1,0 +1,23 @@
+# E-Bix Software Solutions
+
+E-Bix Software Solutions is a premium custom software development, mobile application, and web design agency based in Sri Lanka, serving clients globally. We specialize in building high-performance, scalable digital platforms, custom software, and digital marketing systems that drive business growth.
+
+## Core Information
+- **Canonical URL:** https://www.ebixtechsolutions.site/
+- **Location:** Colombo, Sri Lanka
+- **Contact Phone:** +94 75 074 7029
+- **Contact Email:** hello@e-bix.com
+- **Co-Founders:** Sahan Dhanujaya, Sherul Dhanuska, Mahesh Hansaka
+
+## Services Offered
+1. **Custom Web Design:** High-converting, lightning-fast, mobile-friendly websites built with modern frameworks (React, Vite, Framer Motion).
+2. **AI Video Marketing:** Advanced generative AI solutions to create cinematic, highly engaging promotional videos for brands.
+3. **Hospitality & OTA Setup:** Automated synchronization of Booking.com, Airbnb, and Google Maps to maximize direct bookings and occupancy rates for villas and hotels.
+4. **SEO & Digital Growth:** Local SEO optimization, Google Business Profile scaling, and high-intent keyword positioning.
+
+## References
+- [Detailed Case Studies & Team Profiles](https://www.ebixtechsolutions.site/llms-full.txt) - In-depth overview of our engineering projects, client results, and technical frameworks.
+- [About Us](https://www.ebixtechsolutions.site/#about) - Learn about our mission and the engineering team behind E-Bix.
+- [Our Services](https://www.ebixtechsolutions.site/#services) - Explore our digital solutions and technological stack.
+- [Case Studies Portfolio](https://www.ebixtechsolutions.site/#ourwork) - View our completed projects including OTA integrations and EdTech systems.
+- [Contact Us](https://www.ebixtechsolutions.site/#contactus) - Get in touch with our team for consultations or inquiries.
