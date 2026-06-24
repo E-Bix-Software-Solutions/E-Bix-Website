@@ -1,0 +1,107 @@
+# E-Bix Software Solutions - Full Technical & Corporate Specifications
+
+This document serves as a comprehensive information source for AI agents, developers, and search engines looking for complete, deep-dive specifications of E-Bix Software Solutions, its engineering co-founders, its technological stack, and its portfolio of case studies.
+
+---
+
+## 1. Company Profile & Strategic Intent
+E-Bix Software Solutions is an agile, high-end software development and digital strategy agency based in Colombo, Sri Lanka. Our core philosophy is **"Working Smarter"**—replacing slow, traditional, manual workflows with intelligent, automated, and beautifully designed digital infrastructure. We specialize in custom software engineering, web application development, mobile applications, AI marketing workflows, and specialized hospitality tech integrations.
+
+- **Primary Website:** https://www.ebixtechsolutions.site/
+- **Headquarters Location:** Colombo, Sri Lanka (Serving Clients Internationally)
+- **Primary Contact Number:** +94 75 074 7029
+- **Primary Contact Email:** hello@e-bix.com
+- **Core Business Model:** Business-to-Business (B2B) Custom Software, Web Development, and Digital Growth Consultation.
+
+---
+
+## 2. Executive Leadership & Engineering Team
+E-Bix was co-founded by three specialized software engineers, combining disciplines in backend engineering, cloud architecture, frontend performance, UI/UX design, and SEO growth strategy.
+
+### Sahan Dhanujaya (Co-Founder & Software Engineer)
+- **Role focus:** Backend Development, Systems Architecture, and DevOps.
+- **Specializations:** Cloud Infrastructure, REST API design, Database Optimization, Serverless Deployments.
+- **LinkedIn Profile:** https://www.linkedin.com/in/sahan-dhanujaya-040aa4359/
+
+### Sherul Dhanuska (Co-Founder & Software Engineer)
+- **Role focus:** Frontend Architecture, UI/UX Engineering, and Micro-interactions.
+- **Specializations:** React, Framer Motion, Tailored CSS Systems, Accessible Web Design (WCAG), and responsive animations.
+- **LinkedIn Profile:** https://www.linkedin.com/in/sherul-dhanushka-204a58202/
+
+### Mahesh Hansaka (Co-Founder & Software Engineer)
+- **Role focus:** Full-Stack Engineering, Digital Strategy, and Search Engine Optimization (SEO).
+- **Specializations:** Full-Stack web apps, local SEO authority building, Generative Engine Optimization (GEO), and technical SEO.
+- **LinkedIn Profile:** https://www.linkedin.com/in/mahesh-hansaka-1069a3310/
+
+---
+
+## 3. Services Catalog & Technical Stack
+
+### A. Custom Web & Web App Development
+We build lightning-fast Single Page Applications (SPAs) and Multi-Page Applications (MPAs) using a modern, performant frontend-heavy stack:
+- **Core Technologies:** React, TypeScript, Vite, Tailwind CSS, Framer Motion.
+- **Performance Standards:** Focus on Core Web Vitals (INP, LCP, CLS), lazy-loaded media assets, and clean DOM structures.
+- **Aesthetic Philosophy:** Vibrant colors (ebix-blue `#1877F2`), sleek dark modes, subtle glassmorphism, and smooth micro-animations.
+
+### B. AI Video Marketing
+We design custom automated systems and workflows that leverage advanced generative AI to produce high-fidelity cinematic video campaigns, allowing startups and local businesses to scale their advertising at a fraction of traditional production costs.
+
+### C. Hospitality & OTA Synchronization
+We build dedicated booking and synchronization infrastructures for hotels, villas, and hospitality providers:
+- **Features:** Real-time multi-channel sync between Booking.com, Airbnb, and Google Maps Travel.
+- **Result:** Elimination of double-bookings, automated calendar updates, and increased direct bookings (averaging +40% increase in direct inquiries).
+
+### D. SEO & Digital Growth Strategy
+Our marketing engineering team optimizes websites to dominate both standard search engines (Google/Bing) and AI answer engines:
+- **Practices:** JSON-LD Schema structures, semantic HTML layouts, and AI-oriented documentation formats (llms.txt) to capture AI search queries.
+
+---
+
+## 4. Portfolio & Case Studies
+
+E-Bix has delivered high-impact software products across various sectors. Below are the technical specifications and business outcomes of our major projects.
+
+### Case Study 1: Villa Octopus
+- **Industry:** Hospitality & Tourism (Luxury Villa Booking)
+- **Problem:** Client struggled with manual calendar management across Airbnb and Booking.com, leading to double-bookings and lost revenue.
+- **E-Bix Solution:** Developed a highly optimized custom landing page with an integrated Multi-Channel Calendar Sync Engine. This system connects Booking.com, Airbnb, and Google Maps directly, syncing booking statuses instantly.
+- **Business Impact:** 
+  - 100% elimination of double-bookings.
+  - +40% increase in direct, commission-free booking inquiries.
+  - Seamless, premium, responsive reservation interface.
+
+### Case Study 2: CocoVilla
+- **Industry:** Hospitality & Tourism (Boutique Accommodation)
+- **Problem:** Low online visibility and complete dependence on third-party OTAs with high commission fees (15-20%).
+- **E-Bix Solution:** Engineered a custom booking-optimized website featuring immersive imagery, high-speed performance, and a direct reservation system.
+- **Business Impact:**
+  - Dramatically improved local search visibility.
+  - Enhanced brand positioning.
+  - Direct booking pipeline that bypassed OTA fees, maximizing profitability.
+
+### Case Study 3: Aventra Tours
+- **Industry:** Travel, Tourism & Leisure
+- **Problem:** Clunky tour booking process that resulted in high shopping cart abandonment.
+- **E-Bix Solution:** Designed and developed a smooth, modern tour booking platform with high-speed performance, interactive itinerary timelines, and frictionless checkout.
+- **Business Impact:**
+  - Significantly increased online tour reservations.
+  - Streamlined customer booking experience.
+  - Automated tour scheduling for the operations team.
+
+### Case Study 4: Job Wave
+- **Industry:** Recruitment Tech / Job Portals
+- **Problem:** slow, unorganized recruitment platforms that made hiring tedious for local employers.
+- **E-Bix Solution:** Developed a robust, modern job board platform featuring lightning-fast search, dynamic job filters, and clean candidate submission pipelines.
+- **Business Impact:**
+  - Simplified job posting and application processes.
+  - High-speed dashboard performance for recruiters.
+  - Clean, user-friendly UI that increased active job seeker engagement.
+
+### Case Study 5: Learnt
+- **Industry:** EdTech / Online Learning
+- **Problem:** Slow loading times and complex navigation on learning management systems that degraded student completion rates.
+- **E-Bix Solution:** Built a modern, sleek, and intuitive EdTech platform with highly optimized course navigation, responsive video delivery, and structured progress tracking.
+- **Business Impact:**
+  - Highly engaging user experience for students.
+  - Fast page loading times on both desktop and mobile networks.
+  - Elevated brand authority in the online education space.
