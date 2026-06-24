@@ -61,14 +61,7 @@ export default function HeroPage() {
         
         {/* Left Column: Text & CTAs */}
         <div className="col-span-1 lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left">
-          
-          {/* Badge */}
-          <motion.div variants={itemVariants as unknown as Variants} className="flex justify-center lg:justify-start">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-[#1877F2]/10 text-[#1877F2] border border-[#1877F2]/20 backdrop-blur-md">
-              <Rocket className="h-3.5 w-3.5 animate-pulse" />
-              Next-Gen Software Engineering
-            </span>
-          </motion.div>
+        
 
           {/* Heading */}
           <motion.h1 
