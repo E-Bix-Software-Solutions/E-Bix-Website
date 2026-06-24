@@ -259,6 +259,7 @@ const AboutPage = () => {
                       alt={member.name}
                       title={member.postition}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </a>
                   <span className="text-sm font-bold text-foreground text-center leading-tight">
