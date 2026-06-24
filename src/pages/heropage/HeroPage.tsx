@@ -1,5 +1,5 @@
 import { motion, type Variants } from "framer-motion";
-import { ArrowRight, Rocket, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Adjust according to your shadcn paths
 
 // Animation Variants for parent-child staggering
