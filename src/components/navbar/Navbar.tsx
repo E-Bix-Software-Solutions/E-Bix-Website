@@ -28,6 +28,8 @@ export function Navbar() {
     { title: "Contact Us", href: "#contactus", id: "contactus" },
   ];
 
+  const COMPANY_NAME = import.meta.env.VITE_COMPANY_NAME || "E-Bix"; // Fallback to "E-Bix" if not defined
+
   // 1. Smart Scroll spy using Intersection Observer API
   useEffect(() => {
     const observerOptions = {
@@ -99,7 +101,7 @@ export function Navbar() {
                     </span>
                   </div>
                   <span className="text-xl font-bold tracking-tighter text-[#1877F2]">
-                    E-Bix
+                    {COMPANY_NAME}
                   </span>
                 </SheetTitle>
               </SheetHeader>
@@ -176,7 +178,7 @@ export function Navbar() {
             </div>
           </div>
           <span className="text-2xl font-bold tracking-tighter hidden md:inline-block ml-1">
-            E-Bix<span className="text-[#1877F2]">.</span>
+            {COMPANY_NAME}<span className="text-[#1877F2]">.</span>
           </span>
         </div>
 
