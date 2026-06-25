@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import ProjectModal from "@/components/modals/ProjectModal";
 import { useProjectModal } from "@/hooks/useProjectModal";
 import { caseStudies } from "@/data/projects";
+import { INFO } from "@/data/info";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -150,6 +151,7 @@ const OurWorkPage = () => {
               Let's collaborate to build something truly exceptional for your
               business.
             </p>
+            <p className="text-blue-100 text-lg font-bold">Partner with {INFO.companyName}.</p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#contactus"

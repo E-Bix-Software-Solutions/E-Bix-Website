@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, MessageSquare, User } from "lucide-react";
 import { useLoader } from "@/components/providers/LoaderProvider";
+import { INFO } from "@/data/info";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg
@@ -120,7 +121,7 @@ const ContactPage = () => {
                 <p className="text-muted-foreground text-sm">
                   Mon-Fri from 8am to 5pm
                 </p>
-                <p className="font-medium mt-1">+94 75 074 7029</p>
+                <p className="font-medium mt-1">{INFO.phone}</p>
               </div>
             </motion.div>
 
@@ -136,7 +137,7 @@ const ContactPage = () => {
                 <p className="text-muted-foreground text-sm">
                   Our friendly team is here to help.
                 </p>
-                <p className="font-medium mt-1">hello@e-bix.com</p>
+                <p className="font-medium mt-1">{INFO.email}</p>
               </div>
             </motion.div>
 
@@ -152,7 +153,7 @@ const ContactPage = () => {
                 <p className="text-muted-foreground text-sm">
                   Come say hello at our office HQ.
                 </p>
-                <p className="font-medium mt-1">Colombo, Sri Lanka</p>
+                <p className="font-medium mt-1">{INFO.address}</p>
               </div>
             </motion.div>
           </motion.div>
