@@ -16,6 +16,31 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+// TypeScript declarations for Google's <model-viewer> custom element
+declare module "react" {
+  namespace JSX {
+    interface IntrinsicElements {
+      "model-viewer": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        src?: string;
+        alt?: string;
+        "auto-rotate"?: boolean;
+        "camera-controls"?: boolean;
+        "interaction-prompt"?: string;
+        "shadow-intensity"?: string;
+        "shadow-softness"?: string;
+        "disable-zoom"?: boolean;
+        "disable-pan"?: boolean;
+        loading?: "auto" | "lazy" | "eager";
+        reveal?: "auto" | "interaction" | "manual";
+        poster?: string;
+        "rotation-per-second"?: string;
+        autoplay?: boolean;
+        style?: React.CSSProperties;
+      };
+    }
+  }
+}
+
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -163,16 +188,27 @@ export function Navbar() {
                 E
               </span>
             </div>
-            {/* Dangling Sign Board / Image */}
+            {/* Dangling 3D Vesak Lantern */}
             <div className="absolute top-8 flex flex-col items-center pointer-events-none z-10 origin-top animate-swing">
               {/* String / Cord */}
-              <div className="w-[1.5px] h-6 bg-slate-400 dark:bg-slate-500/80 shadow-sm" />
-              {/* Hanging Board */}
-              <div className="relative -mt-[1px] border border-slate-300 dark:border-slate-700/80 rounded-lg overflow-hidden shadow-lg bg-card max-w-[110px] md:max-w-[150px] transition-transform duration-300 group-hover:scale-105">
-                <img
-                  src="/imgi_294_e5ae4c13105aeb5310a8789ef4618545.jpg"
-                  alt="Hanging decoration"
-                  className="w-full h-auto object-cover"
+              <div className="w-[1.5px] h-10 bg-slate-400 dark:bg-slate-500/80 shadow-sm" />
+              {/* 3D Model Viewer Container */}
+              <div className="relative -mt-[2px] w-[130px] h-[130px] md:w-[170px] md:h-[170px] transition-transform duration-300 group-hover:scale-110 pointer-events-auto">
+                <model-viewer
+                  src="/models/vesak-lanterns.glb"
+                  alt="Vesak Lantern 3D"
+                  auto-rotate
+                  camera-controls
+                  disable-zoom
+                  disable-pan
+                  interaction-prompt="none"
+                  shadow-intensity="1.5"
+                  shadow-softness="0.5"
+                  autoplay
+                  loading="lazy"
+                  reveal="auto"
+                  rotation-per-second="15deg"
+                  style={{ width: "100%", height: "100%", background: "transparent", cursor: "grab" }}
                 />
               </div>
             </div>
