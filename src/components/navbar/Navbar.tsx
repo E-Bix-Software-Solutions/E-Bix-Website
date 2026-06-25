@@ -153,14 +153,29 @@ export function Navbar() {
             const el = document.getElementById("home");
             if (el) el.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex items-center gap-3 group cursor-pointer"
+          className="flex items-center gap-3 group cursor-pointer relative"
         >
-          <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#1877F2] transition-transform group-hover:rotate-12">
-            <span className="text-white font-black text-xl italic leading-none">
-              E
-            </span>
+          <div className="relative flex flex-col items-center">
+            <div className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-[#1877F2] transition-transform group-hover:rotate-12 z-20">
+              <span className="text-white font-black text-xl italic leading-none">
+                E
+              </span>
+            </div>
+            {/* Dangling Sign Board / Image */}
+            <div className="absolute top-8 flex flex-col items-center pointer-events-none z-10 origin-top animate-swing">
+              {/* String / Cord */}
+              <div className="w-[1.5px] h-6 bg-slate-400 dark:bg-slate-500/80 shadow-sm" />
+              {/* Hanging Board */}
+              <div className="relative -mt-[1px] border border-slate-300 dark:border-slate-700/80 rounded-lg overflow-hidden shadow-lg bg-card max-w-[110px] md:max-w-[150px] transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src="/imgi_294_e5ae4c13105aeb5310a8789ef4618545.jpg"
+                  alt="Hanging decoration"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
-          <span className="text-2xl font-bold tracking-tighter hidden md:inline-block">
+          <span className="text-2xl font-bold tracking-tighter hidden md:inline-block ml-1">
             E-Bix<span className="text-[#1877F2]">.</span>
           </span>
         </div>

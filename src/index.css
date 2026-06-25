@@ -129,3 +129,20 @@
     @apply font-sans;
     }
 }
+
+@keyframes gentle-swing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-swing {
+  transform-origin: top center;
+  animation: gentle-swing 4s ease-in-out infinite;
+}
