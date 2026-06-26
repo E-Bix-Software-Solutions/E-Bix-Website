@@ -1,6 +1,6 @@
 export const INFO = {
   companyName: "E-Bix",
-  email: "support@e-bix.com",
-  phone: "+1-555-0199",
-  address: "123 Innovation Way, Suite 100",
+  email: "ebixsoftwaresolutions1@gmail.com",
+  phone: "+94 75 651 98 37",
+  address: "Panadura 12500",
 };

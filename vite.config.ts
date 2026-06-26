@@ -25,6 +25,15 @@ export const config = {
       colors: {
         ebixBlue: "#1877F2",
       },
+      keyframes: {
+        subtleSwing: {
+          '0%, 100%': { transform: 'rotate(-2deg)' },
+          '50%': { transform: 'rotate(2deg)' },
+        },
+      },
+      animation: {
+        'subtle-swing': 'subtleSwing 4s ease-in-out infinite',
+      },
     },
   }, 
 }
