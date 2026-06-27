@@ -46,7 +46,7 @@ export function PosonBanner() {
         {/* Poster Image Area */}
         <div className="relative aspect-[3/4] w-full bg-muted">
           <img
-            src="/banners/poson-banner.jpeg"
+            src="/banners/poson-greeting-banner.jpeg"
             alt="Blessed Poson Poya Day"
             className="w-full h-full object-cover"
             loading="eager"
