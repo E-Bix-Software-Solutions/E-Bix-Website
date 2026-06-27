@@ -1,4 +1,5 @@
 import { motion, type Variants } from "framer-motion";
+import { INFO } from "@/data/info";
 
 const AboutPage = () => {
   const containerVariants: Variants = {
@@ -119,9 +120,7 @@ const AboutPage = () => {
               The Story
             </h3>
             <p className="text-muted-foreground text-md md:text-lg leading-relaxed">
-              <span className="font-bold text-ebix-blue">
-                E-Bix Software Solutions
-              </span>{" "}
+              <span className="font-bold text-ebix-blue">{INFO.companyName}</span>{" "}
               helps <span>Global businesses grow online.</span> We use AI and
               creative ideas to build powerful digital tools not just websites
               that <span>increase your income.</span>
@@ -292,10 +291,7 @@ const AboutPage = () => {
               piece. You need a strategy."
             </p>
             <p className="text-md md:text-lg text-slate-400 leading-relaxed font-light">
-              At{" "}
-              <span className="text-white font-semibold">
-                E-Bix Software Solutions
-              </span>
+              At <span className="text-white font-semibold">{INFO.companyName}</span>
               , we act as your strategic partner. We align the right digital
               pieces from Bishops to Queens to ensure your business always wins
               the game.

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Smartphone, Play, Building, TrendingUp } from "lucide-react";
+import { INFO } from "@/data/info";
 
 const services = [
   {
@@ -80,8 +81,8 @@ const ServicePage = () => {
             variants={fadeInUp}
             className="text-gray-300 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
           >
-            We build robust digital foundations and deploy cutting-edge growth 
-            strategies so you can easily Work Smarter, Not Harder.
+            We build robust digital foundations and deploy cutting-edge growth
+            strategies so you can easily Work Smarter, Not Harder. Partner with {INFO.companyName}.
           </motion.p>
         </motion.div>
 

@@ -1,6 +1,7 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button"; // Adjust according to your shadcn paths
+import { INFO } from "@/data/info";
 
 // Animation Variants for parent-child staggering
 const containerVariants = {
@@ -36,6 +37,8 @@ const glowVariants = {
 };
 
 export default function HeroPage() {
+
+  const COMPANY_NAME = INFO.companyName || import.meta.env.VITE_COMPANY_NAME || "E-Bix";
   return (
     <div className="relative min-h-[90vh] w-full overflow-hidden bg-background flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-4">
       
@@ -68,7 +71,7 @@ export default function HeroPage() {
             variants={itemVariants as unknown as Variants}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground leading-[1.15]"
           >
-            Empowering Digital Evolution With <span className="text-[#1877F2] bg-gradient-to-r from-[#1877F2] to-[#4fa1ff] bg-clip-text text-transparent">E-Bix</span> Solutions
+            Empowering Digital Evolution With <span className="text-[#1877F2] bg-gradient-to-r from-[#1877F2] to-[#4fa1ff] bg-clip-text text-transparent">{COMPANY_NAME}</span> Solutions
           </motion.h1>
 
           {/* Description */}
