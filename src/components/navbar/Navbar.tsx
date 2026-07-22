@@ -16,51 +16,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-// Reusable Customized SVG Vesak Lantern Component
-function CustomVesakLantern({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex flex-col items-center pointer-events-none ${className}`}>
-      {/* Lantern Hanging String */}
-      <div className="w-[1.5px] h-8 bg-slate-400 dark:bg-slate-500/80 shadow-sm" />
-      
-      {/* Customized SVG Lantern */}
-      <svg
-        width="64"
-        height="96"
-        viewBox="0 0 64 96"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="drop-shadow-[0_4px_10px_rgba(24,119,242,0.4)] dark:drop-shadow-[0_4px_15px_rgba(255,255,255,0.2)]"
-      >
-        {/* Main Diamond Structure */}
-        <path d="M32 4L54 28L32 52L10 28L32 4Z" fill="#1877F2" opacity="0.9" />
-        <path d="M32 4V52" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="1 1" />
-        <path d="M10 28H54" stroke="#FFFFFF" strokeWidth="1" strokeDasharray="1 1" />
-
-        {/* Side Triangles / Accents */}
-        <path d="M10 28L32 20L54 28L32 36L10 28Z" fill="#60A5FA" opacity="0.7" />
-
-        {/* Outer Frame Highlight */}
-        <path d="M32 4L54 28L32 52L10 28L32 4Z" stroke="#FFFFFF" strokeWidth="1.5" strokeLinejoin="round" />
-
-        {/* Hanging Tassels / Tails */}
-        {/* Left Tassel */}
-        <path d="M18 40V84" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
-        <path d="M22 46V76" stroke="#93C5FD" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-        
-        {/* Center Tassel */}
-        <path d="M32 52V92" stroke="#1877F2" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M28 50V80" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-        <path d="M36 50V80" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-        
-        {/* Right Tassel */}
-        <path d="M46 40V84" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round" opacity="0.8" />
-        <path d="M42 46V76" stroke="#93C5FD" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-      </svg>
-    </div>
-  );
-}
-
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -142,9 +97,6 @@ export function Navbar() {
                         E
                       </span>
                     </div>
-
-                    {/* Customized Mobile Lantern */}
-                    <CustomVesakLantern className="absolute top-5 origin-top scale-75 animate-[swing_3s_ease-in-out_infinite]" />
                   </div>
                   <span className="text-xl font-bold tracking-tighter text-[#1877F2] ml-1">
                     {COMPANY_NAME}
@@ -210,9 +162,6 @@ export function Navbar() {
                 E
               </span>
             </div>
-
-            {/* Customized Desktop Lantern */}
-            <CustomVesakLantern className="absolute top-7 hidden lg:flex origin-top animate-[swing_4s_ease-in-out_infinite] group-hover:scale-105 transition-transform duration-300" />
           </div>
 
           <span className="text-2xl font-bold tracking-tighter hidden md:inline-block ml-1">

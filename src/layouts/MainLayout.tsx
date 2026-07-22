@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/footer/Footer";
-import { PosonBanner } from "@/components/banners/PosonBanner"; // Import here
 import HeroPage from "@/pages/heropage/HeroPage";
 import ServicePage from "@/pages/servicepage/ServicePage";
 import AboutPage from "@/pages/aboutpage/aboutpage";
@@ -10,8 +9,6 @@ import ContactPage from "@/pages/contactpage/ContactPage";
 const MainLayout = () => {
   return (
     <div className="relative flex min-h-screen flex-col">
-      {/* Session Entry Greeting Ad Popup */}
-      <PosonBanner />
 
       {/* Sticky Navbar */}
       <Navbar />
